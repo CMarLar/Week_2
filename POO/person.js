@@ -12,11 +12,11 @@ class Person
 
     calcIMC(){
         let imc = this.weight / ((this.height) * (this.height)) * 10000;
-        return "IMC - " + imc.toFixed(2);
+        return imc.toFixed(2);
     }
 
     currentAge(currentYear){
-        return "Edad -" + currentYear - this.yearOfBirth;
+        return currentYear - this.yearOfBirth;
     }
 
     printAll(){

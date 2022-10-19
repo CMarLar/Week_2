@@ -4,12 +4,12 @@ class Contacts
 {
     constructor()
     {
-        this.contacts = [];//array de obj de clase Person
+        this.people = [];//array de obj de clase Person
     }
 
     printPersons(){
-        for (let i = 0; i < this.contacts.length; i++) {
-            console.log(this.contacts[i]);         
+        for (let i = 0; i < this.people.length; i++) {
+            console.log(this.people[i]);         
         }
     }
 
