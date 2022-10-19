@@ -4,7 +4,10 @@ let classPerson = require("./person");
 
 let persona = new classPerson.Person("Carlos","varón",1986,173,90);
 
-persona.printAll()
-console.log(persona.calcIMC());
-console.log(persona.currentAge(2022));
-console.log(persona.hobbies);
+//DESCOMENTAR PARA COMPROBAR, COMENTAR PARA QUE NO SE IMPORTE ESTA INFO A contacts.js via importedPerson.
+// persona.printAll()
+// console.log(persona.calcIMC());
+// console.log(persona.currentAge(2022));
+// console.log(persona.hobbies);
+
+module.exports = {persona};
