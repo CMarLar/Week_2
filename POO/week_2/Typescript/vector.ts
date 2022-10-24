@@ -1,4 +1,4 @@
-export class Vector
+export class Vector 
 {
     private elements: number[]
 
