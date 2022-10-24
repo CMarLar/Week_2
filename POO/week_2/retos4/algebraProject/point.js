@@ -50,6 +50,21 @@ var Point = /** @class */ (function () {
         }
         return quadrant;
     };
+    /*Programa un método denominado calculateNearest(points : Point[]) : Point, que reciba
+    como parámetro un array de objetos de la clase Point y devuelva una referencia al objeto
+    de dicho array que esté más cercano al punto actual.
+    NOTA: Utilizar para ello el método calculateDistance implementado en el reto3.
+    */
+    Point.prototype.calculateNearest = function (points) {
+        var temporalPoint = points[0]; //temporalPoint igualado con el primer elemento de points
+        for (var i = 0; i < points.length; i++) { //recorremos points
+            if (points[i].calculateDistance(this) < temporalPoint.calculateDistance(this)) {
+                //si la distancia de los elementos de points con respecto a este punto es menor que las del punto temporal con respecto a este punto.
+                temporalPoint = points[i]; //iguala temporal point con i. Siempre saldrá el de menor distancia.
+            }
+        }
+        return temporalPoint;
+    };
     return Point;
 }());
 exports.Point = Point;

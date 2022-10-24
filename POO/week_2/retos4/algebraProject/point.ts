@@ -50,22 +50,18 @@ export class Point
     de dicho array que esté más cercano al punto actual.
     NOTA: Utilizar para ello el método calculateDistance implementado en el reto3.
     */
-    // public calculateNearest(points : Point[]) : Point{
-    //     let pointsArray: Point[] = [];//almacenamos puntos segun llegan (en esencia, recogemos el array de parámetro en otro array).
-    //     let allDistances: number[] = []; //almacenamos numbers de las distancias
-    //     let pointsInfoString: string[] = [];//almacenamos strings de distancias + puntos
-    //     for (let i: number = 0; i < points.length; i++) {
 
-    //         pointsArray.push(points[i])//llenamos array de puntos
-    //         allDistances.push(points[i].calculateDistance(this))//llenamos el array de distancias.
-    //         //en este momento del código, pointsArray[i] = allDistances[i].
-    //         //Ahora construiremos un array de strings con ambos datos, con los números primero y la ordenaremos de menor a mayor.
-    //         let message: string = `00${i+1}${allDistances[i]}:${pointsArray[i].getX()},${pointsArray[i].getY()}`;//creamos un mensaje de string con formato "00idistancia : punto (x,y) "
-    //         pointsInfoString.push(message);//metemos los mensajes en el array de strings
-    //         pointsInfoString.sort();//sorto ordena de 
-
-    //     }
-    // }
+    public calculateNearest(points : Point[]) : Point{//recibe array de puntos, compara con this, devuelve punto
+        let temporalPoint: Point = points[0];//temporalPoint igualado con el primer elemento de points
+        for (let i = 0; i < points.length; i++) {//recorremos points
+            if(points[i].calculateDistance(this) < temporalPoint.calculateDistance(this)){
+                //si la distancia de los elementos de points con respecto a este punto es menor que las del punto temporal con respecto a este punto.
+            temporalPoint = points[i]//iguala temporal point con i. Siempre saldrá el de menor distancia.
+            }
+        }
+            return temporalPoint;
+        }
+    
 
 }
 
