@@ -16,25 +16,27 @@ export class Vector
     }
 
     public add(v1:Vector):Vector{
-        
+        let addVector : Vector = v1;
         for (let i = 0; i < v1.elements.length; i++) {
-            v1.elements[i] = this.elements[i] + v1.elements[i]
+            addVector.elements[i] = this.elements[i] + v1.elements[i]
         }
-        return v1;
+        return addVector;
     }
 
     public subs(v1:Vector):Vector{
+        let subsVector: Vector = v1;
         for (let i = 0; i < v1.elements.length; i++) {
-            v1.elements[i] = this.elements[i] - v1.elements[i]
+            subsVector.elements[i] = this.elements[i] - v1.elements[i]
         }
-        return v1;
+        return subsVector;
     }
 
     public mult(v1:Vector):Vector{
+        let multVector: Vector = v1;
         for (let i = 0; i < v1.elements.length; i++) {
-            v1.elements[i] = this.elements[i] * v1.elements[i]
+            multVector.elements[i] = this.elements[i] * v1.elements[i]
         }
-        return v1;
+        return multVector;
     }
 
     public multNumber(n:number):Vector{

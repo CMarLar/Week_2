@@ -16,7 +16,6 @@ export class Library
 
     public getAddress(): string { return this.address};
     public getManager(): string { return this.manager};
-    public getBooks(): Book[] {return this.books};
 
     public setAddress(address) {return this.address = address};
     public setManager(manager) {return this.manager = manager};
